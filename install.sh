@@ -1,7 +1,20 @@
 #!/bin/bash
 
-# URL of the file to download
-FILE_URL="https://github.com/dev-hann/remote_usb/releases/latest/download/rusb"
+# Base URL for the files
+BASE_URL="https://github.com/dev-hann/remote_usb/releases/latest/download"
+
+# Determine the OS type
+OS_TYPE=$(uname)
+
+# Set the file name based on the OS type
+if [ "$OS_TYPE" == "Linux" ]; then
+    FILE_URL="$BASE_URL/rusb_unix"
+elif [ "$OS_TYPE" == "Darwin" ]; then
+    FILE_URL="$BASE_URL/rusb_osx"
+else
+    echo "Unsupported OS: $OS_TYPE"
+    exit 1
+fi
 
 # Destination directory
 DEST_DIR="/usr/local/sbin"
