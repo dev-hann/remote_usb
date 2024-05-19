@@ -17,19 +17,19 @@ class ProcessService {
     );
   }
 
-  Future runSocat(String port) {
+  Future initSocat(String port) {
     return _run(
       "socat tcp-listen:$port,fork unix-connect:/var/run/usbmuxd",
     );
   }
 
-  Future runHostUsbfluxd() {
+  Future initHostUsbfluxd() {
     return _run(
       "usbfluxd -f -n",
     );
   }
 
-  Future runClientUsbfluxd(String address, String port) {
+  Future initClientUsbfluxd(String address, String port) {
     return _run(
       "usbfluxd -f -r $address:$port",
     );

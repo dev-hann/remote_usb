@@ -7,7 +7,8 @@ import 'package:remote_usb/command/client_command.dart';
 import 'package:remote_usb/command/host_command.dart';
 
 void main(List<String> arguments) async {
-  final runner = CommandRunner("rusb", "rusb Desc Text");
+  final runner = CommandRunner(
+      "rusb", "Remote Usb \nPassthrough Usb Connection by local network.");
   final parser = runner.argParser;
   parser.addOption("port", abbr: "p", defaultsTo: "5000");
   parser.addOption("address", abbr: "a", defaultsTo: "172.17.0.1");
