@@ -24,9 +24,17 @@ To use `remote-usb`, you need to have Dart installed on your system. You can ins
 
 Clone this repository and navigate to the project directory:
 
+```sh
+curl -L https://github.com/dev-hann/remote_usb/raw/main/install.sh | bash
+
+```
+
+OR Binary
+
 ```bash
 git clone https://github.com/dev-hann/remote_usb.git
 cd remote_usb
+dart compile exe ./bin/remote_usb.dart
 ```
 
 ## Usage
