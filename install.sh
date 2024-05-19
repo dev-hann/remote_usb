@@ -1,11 +1,3 @@
-#/bin/bash
-
-curl https://github.com/dev-hann/remote_usb/releases/latest/download/rusb
-cd build
-sudo cp rusb /usr/local/sbin/
-
-echo "rusb install Success!"
-
 #!/bin/bash
 
 # URL of the file to download
